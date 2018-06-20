@@ -19,8 +19,13 @@ def remove_strawberry(contacts)
 
     hash.each do |key, value|
 
-      if key == :favorite_ice_cream_flavors && value[0] == "strawberry"
-          value[0].delete
+      if key == :favorite_ice_cream_flavors
+
+          value.each do |word| 
+            if word == "strawberry"
+              word.delete
+            end
+          end
       end
     end
   end
